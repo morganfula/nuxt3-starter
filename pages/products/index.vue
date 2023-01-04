@@ -18,7 +18,10 @@
 		'https://fakestoreapi.com/products'
 	);
 
-	console.log(products);
+	useHead({
+		title: 'Nuxt 3 Starter | Merch',
+		meta: [{ name: 'descriptio', content: 'Nuxt 3 Merch' }],
+	});
 </script>
 
 <style scoped>

@@ -11,10 +11,13 @@
 			libero obcaecati non eum velit voluptates, animi numquam totam
 			consectetur.
 		</p>
+		<div>{{ data }}</div>
 	</div>
 </template>
 
-<script setup></script>
+<script setup>
+	const { data } = await useFetch('/api/starter');
+</script>
 
 <style scoped>
 	h2 {

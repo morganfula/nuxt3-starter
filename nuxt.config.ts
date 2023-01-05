@@ -1,8 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	runtimeConfig: {
-		API_KEY: process.env.API_KEY,
-	},
 	modules: ['@nuxtjs/tailwindcss'],
 	app: {
 		head: {
@@ -15,5 +12,8 @@ export default defineNuxtConfig({
 				},
 			],
 		},
+	},
+	runtimeConfig: {
+		API_KEY: process.env.API_KEY,
 	},
 });

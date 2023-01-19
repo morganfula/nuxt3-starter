@@ -1,16 +1,6 @@
 <template>
 	<div>
 		<h2>Home</h2>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. At similique
-			libero obcaecati non eum velit voluptates, animi numquam totam
-			consectetur.
-		</p>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. At similique
-			libero obcaecati non eum velit voluptates, animi numquam totam
-			consectetur.
-		</p>
 	</div>
 </template>
 

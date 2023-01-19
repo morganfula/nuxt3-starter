@@ -7,21 +7,31 @@
 		</header>
 
 		<!--? output the page content -->
+		<div v-if="loading" class="loader content-center flex justify-items-center">
+			<Loader />
+		</div>
+
 		<div class="container mx-auto p-4">
 			<slot />
 		</div>
 
-		<footer class="container mx-auto p-4 flex justify-between border-t-2">
-			<ul class="flex gap-4">
-				<li><NuxtLink to="/">Home</NuxtLink></li>
-				<li><NuxtLink to="/about">About</NuxtLink></li>
-				<li><NuxtLink to="/products">Products</NuxtLink></li>
-			</ul>
-		</footer>
+		<Footer />
 	</div>
 </template>
 
-<script setup></script>
+<script setup>
+	const nuxtApp = useNuxtApp();
+	const loading = ref(false);
+	nuxtApp.hook('page:start', () => {
+		loading.value = true;
+	});
+
+	nuxtApp.hook('page:finish', () => {
+		setTimeout(() => {
+			loading.value = false;
+		}, 3000);
+	});
+</script>
 
 <style scoped>
 	.router-link-exact-active {

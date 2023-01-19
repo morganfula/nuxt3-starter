@@ -1,21 +1,21 @@
 <template>
-	<div>
+	<section>
 		<div class="grid grid-cols-4 gap-5">
 			<div v-for="p in products" :key="p.id">
 				<ProductCard :product="p" />
 			</div>
 		</div>
-	</div>
+	</section>
 </template>
 
 <script setup>
+	import Config from '~/assets/config.js';
 	definePageMeta({
 		layout: 'products',
 	});
 
-	// fetch the product
 	const { data: products } = await useFetch(
-		'https://fakestoreapi.com/products'
+		Config.wpDomain + Config.api.events22
 	);
 
 	useHead({

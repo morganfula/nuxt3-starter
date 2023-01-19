@@ -1,0 +1,65 @@
+<template>
+	<div class="page-loader">
+		<div class="spinner"></div>
+		<div class="txt">Loading...</div>
+	</div>
+</template>
+
+<script setup></script>
+
+<style scoped>
+	.page-loader {
+		width: 100%;
+		height: 100vh;
+		position: absolute;
+		background: #e4e4e4;
+		z-index: 1000;
+		overflow: hidden;
+	}
+	.txt {
+		color: #666;
+		text-align: center;
+		top: 40%;
+		position: relative;
+		text-transform: uppercase;
+		letter-spacing: 0.3rem;
+		font-weight: bold;
+		line-height: 1.5;
+	}
+
+	/* SPINNER ANIMATION */
+	.spinner {
+		position: relative;
+		top: 35%;
+		width: 80px;
+		height: 80px;
+		margin: 0 auto;
+		background-color: #fff;
+
+		border-radius: 100%;
+		-webkit-animation: sk-scaleout 1s infinite ease-in-out;
+		animation: sk-scaleout 1s infinite ease-in-out;
+	}
+
+	@-webkit-keyframes sk-scaleout {
+		0% {
+			-webkit-transform: scale(0);
+		}
+		100% {
+			-webkit-transform: scale(1);
+			opacity: 0;
+		}
+	}
+
+	@keyframes sk-scaleout {
+		0% {
+			-webkit-transform: scale(0);
+			transform: scale(0);
+		}
+		100% {
+			-webkit-transform: scale(1);
+			transform: scale(1);
+			opacity: 0;
+		}
+	}
+</style>

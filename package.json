@@ -12,5 +12,7 @@
 		"@nuxtjs/tailwindcss": "^6.2.0",
 		"nuxt": "3.0.0"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"@studio-freight/lenis": "^0.2.28"
+	}
 }

@@ -2,7 +2,7 @@
 	<div>
 		<header class="shadow-sm bg-white">
 			<nav class="container mx-auto p-4">
-				<NuxtLink to="/products" class="font-bold">WEBSITE MERCH</NuxtLink>
+				<NuxtLink to="/" class="font-bold">Home</NuxtLink>
 			</nav>
 		</header>
 
@@ -21,15 +21,14 @@
 
 <script setup>
 	const nuxtApp = useNuxtApp();
+
 	const loading = ref(false);
 	nuxtApp.hook('page:start', () => {
 		loading.value = true;
 	});
 
 	nuxtApp.hook('page:finish', () => {
-		setTimeout(() => {
-			loading.value = false;
-		}, 3000);
+		loading.value = false;
 	});
 </script>
 
